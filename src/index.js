@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import slugify from 'slugify';
 
 const FEATURES = {
   Processor: [
@@ -45,5 +46,12 @@ const FEATURES = {
     },
   ]
 };
+
+// console.log(slugify(JSON.stringify({
+//   name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
+//   cost: 1500
+// })));
+
+// ===> "name":"15.6"-UHD-(3840-x-2160)-60Hz-Bright-Lights-and-Knobs""cost":1500
 
 ReactDOM.render(<App features={FEATURES}/>, document.getElementById('root'));
